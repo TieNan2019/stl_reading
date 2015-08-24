@@ -71,6 +71,8 @@ _GLIBCXX_BEGIN_NAMESPACE_CONTAINER
   template<typename _Tp, typename _Alloc>
     struct _Vector_base
     {
+	// 关于 template 关键字, 参考下面的链接
+	// https://stackoverflow.com/questions/3786360/confusing-template-error/3786481#3786481
       typedef typename __gnu_cxx::__alloc_traits<_Alloc>::template
         rebind<_Tp>::other _Tp_alloc_type;
       typedef typename __gnu_cxx::__alloc_traits<_Tp_alloc_type>::pointer
